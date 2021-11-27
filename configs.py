@@ -20,6 +20,14 @@ class Configs:
     CHANNEL_LINK = getenv("CHANNEL_LINK", "https://t.me/solidprojects")
     GROUP_LINK = getenv("GROUP_LINK", "https://t.me/solidprojects_chat")
     UPSTREAM_REPO = getenv("UPSTREAM_REPO", "https://github.com/DoellBarr/solidmusic")
+    
+    # ID dari Channel Atau Group Untuk Wajib Subscribenya
+    FORCE_SUB_CHANNEL = int(os.environ.get("FORCE_SUB_CHANNEL", "0"))
+    
+    # Pesan Saat Memaksa Subscribe
+    FORCE_MSG = os.environ.get(
+    "FORCE_SUB_MESSAGE",
+    "<b>Hello {first}\n\nAnda harus bergabung di Channel/Grup saya Terlebih dahulu untuk Melihat File yang saya Bagikan\n\nSilakan Join Ke Channel Terlebih Dahulu</b>")
 
 
 config = Configs()
